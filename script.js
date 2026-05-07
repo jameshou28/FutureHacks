@@ -4,9 +4,18 @@
   'use strict';
 
   // ——— CONFIG ———
-  // Set your event date here (replace with actual event date)
-  const EVENT_DATE = new Date();
-  EVENT_DATE.setDate(EVENT_DATE.getDate() + 30); // defaults to 30 days from now
+  // Set your event date and time here. Replace the string below with your event's date and time.
+  // Format: 'Month Day, Year Hour:Minutes:Seconds' (in your local timezone)
+  // Examples:
+  //   'June 15, 2026 09:00:00'
+  //   'August 1, 2026 18:30:00'
+  //   'January 20, 2027 12:00:00'
+  const EVENT_DATE = new Date('[EVENT DATE AND TIME]');
+
+  // Fallback: if the date string above is not yet replaced, default to 30 days from now
+  if (isNaN(EVENT_DATE.getTime())) {
+    EVENT_DATE.setTime(Date.now() + 30 * 24 * 60 * 60 * 1000);
+  }
 
   // ——— DOM REFS ———
   const navbar = document.getElementById('navbar');
