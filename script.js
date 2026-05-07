@@ -7,14 +7,14 @@
   // Set your event date and time here. Replace the string below with your event's date and time.
   // Format: 'Month Day, Year Hour:Minutes:Seconds' (in your local timezone)
   // Examples:
-  //   'June 15, 2026 09:00:00'
-  //   'August 1, 2026 18:30:00'
-  //   'January 20, 2027 12:00:00'
-  const EVENT_DATE = new Date('[EVENT DATE AND TIME]');
+  //   new Date('June 15, 2026 09:00:00')
+  //   new Date('August 1, 2026 18:30:00')
+  //   new Date('2026-06-15T09:00:00-04:00')  ← with timezone offset
+  let EVENT_DATE = new Date('[EVENT DATE AND TIME]');
 
-  // Fallback: if the date string above is not yet replaced, default to 30 days from now
+  // Fallback: if the date string above hasn't been replaced yet, use a fixed placeholder date
   if (isNaN(EVENT_DATE.getTime())) {
-    EVENT_DATE.setTime(Date.now() + 30 * 24 * 60 * 60 * 1000);
+    EVENT_DATE = new Date('July 1, 2026 09:00:00');
   }
 
   // ——— DOM REFS ———
