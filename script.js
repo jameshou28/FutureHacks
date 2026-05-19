@@ -10,12 +10,7 @@
   //   new Date('June 15, 2026 09:00:00')
   //   new Date('August 1, 2026 18:30:00')
   //   new Date('2026-06-15T09:00:00-04:00')  ← with timezone offset
-  let EVENT_DATE = new Date('[EVENT DATE AND TIME]');
-
-  // Fallback: if the date string above hasn't been replaced yet, use a fixed placeholder date
-  if (isNaN(EVENT_DATE.getTime())) {
-    EVENT_DATE = new Date('July 1, 2026 09:00:00');
-  }
+  const EVENT_DATE = new Date('June 24, 2026 08:00:00');
 
   // ——— DOM REFS ———
   const navbar = document.getElementById('navbar');
