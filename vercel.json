@@ -25,6 +25,7 @@
     }
   ],
   "routes": [
+    { "src": "/registration", "dest": "/registration.html" },
     { "handle": "filesystem" },
     { "src": "/.*", "status": 404, "dest": "/404.html" }
   ]
