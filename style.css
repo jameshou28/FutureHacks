@@ -198,6 +198,22 @@ img { max-width: 100%; display: block; }
   50% { transform: translateY(-16px); }
 }
 
+/* ===== TECHSHARE ABOUT SECTION ===== */
+.techshare { background: var(--bg); }
+.techshare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.techshare-left { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.techshare-card { display: flex; align-items: center; justify-content: center; padding: 28px; }
+.techshare-img { width: 200px; height: 200px; object-fit: contain; }
+.techshare-right .section-eyebrow { margin-bottom: 6px; }
+.techshare-right .section-heading { font-size: clamp(1.6rem, 2.6vw, 2rem); margin-bottom: 16px; }
+.techshare-right p { max-width: 680px; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; }
+
+@media (max-width: 900px) {
+  .about-grid, .techshare-grid { grid-template-columns: 1fr; gap: 32px; }
+  .techshare-left { flex-direction: row; justify-content: center; }
+  .techshare-img { width: 140px; height: 140px; }
+}
+
 /* ===== DETAILS ===== */
 .details { background: var(--bg-alt); }
 .details-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
