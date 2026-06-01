@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resources — FutureHacks</title>
-  <meta name="description" content="Tutorial resources for FutureHacks participants">
+  <meta name="description" content="Learning resources for FutureHacks participants — Beginner, Intermediate, and Advanced divisions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,10 +14,12 @@
   <meta name="theme-color" content="#0f172a">
 </head>
 <body>
+
+  <!-- Grain Overlay -->
   <div class="grain" aria-hidden="true"></div>
 
   <!-- Navigation -->
-  <nav class="navbar scrolled" id="navbar">
+  <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">FutureHacks</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -28,236 +30,147 @@
         <li><a href="index.html#details">Details</a></li>
         <li><a href="index.html#schedule">Schedule</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="/registration" class="nav-cta">Register</a></li>
+        <li><a href="resources.html" class="nav-active">Resources</a></li>
+        <li><a href="https://futurehacks.devpost.com/" class="nav-cta" target="_blank" rel="noopener noreferrer">Register</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="resources-hero">
-    <div class="container">
-      <span class="section-eyebrow reveal">Learning Resources</span>
-      <h1 class="resources-title reveal">Find Your Level</h1>
-      <p class="resources-subtitle reveal">Each category includes the rules and guidelines for your track, plus tutorial videos to help you build something great.</p>
-
-      <!-- Category Jump Buttons -->
-      <div class="category-jumps reveal">
-        <a href="#beginner" class="category-jump category-jump--beginner">
-          <span class="category-jump-badge">Beginner</span>
-          <span class="category-jump-label">Just Getting Started</span>
-          <svg class="category-jump-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+  <section class="res-hero">
+    <div class="res-hero-decor" aria-hidden="true">
+      <div class="res-hero-circle res-hero-circle--1"></div>
+      <div class="res-hero-circle res-hero-circle--2"></div>
+    </div>
+    <div class="container res-hero-content">
+      <span class="hero-badge reveal">Learning Materials</span>
+      <h1 class="res-hero-title reveal">Resources</h1>
+      <p class="res-hero-sub reveal">Everything you need to build, learn, and compete. Each division has its own curated Google Drive folder — grab what applies to you and get to work.</p>
+      <div class="res-jumps reveal">
+        <a href="#beginner" class="res-jump res-jump--beginner">
+          <span class="res-jump-num">01</span>
+          <span class="res-jump-label">Beginner</span>
+          <svg class="res-jump-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#intermediate" class="category-jump category-jump--intermediate">
-          <span class="category-jump-badge">Intermediate</span>
-          <span class="category-jump-label">Level Up</span>
-          <svg class="category-jump-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <a href="#intermediate" class="res-jump res-jump--intermediate">
+          <span class="res-jump-num">02</span>
+          <span class="res-jump-label">Intermediate</span>
+          <svg class="res-jump-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#advanced" class="category-jump category-jump--advanced">
-          <span class="category-jump-badge">Advanced</span>
-          <span class="category-jump-label">Go Deep</span>
-          <svg class="category-jump-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <a href="#advanced" class="res-jump res-jump--advanced">
+          <span class="res-jump-num">03</span>
+          <span class="res-jump-label">Advanced</span>
+          <svg class="res-jump-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Beginner Section -->
-  <section class="resources-section section" id="beginner">
+  <!-- Beginner -->
+  <section id="beginner" class="div-section">
     <div class="container">
-      <div class="resources-section-header reveal">
-        <span class="level-badge level-badge--beginner">Beginner</span>
-        <h2 class="resources-section-title">Just Getting Started</h2>
-        <p class="resources-section-desc">New to coding? No problem. These tutorials cover the fundamentals and walk you through simple projects step by step.</p>
-      </div>
-
-      <!-- PDF Guidelines -->
-      <div class="pdf-card reveal">
-        <div class="pdf-card-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect x="4" y="2" width="16" height="22" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M4 7h16M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <rect x="14" y="16" width="10" height="10" rx="2" fill="currentColor" opacity="0.15"/>
-            <path d="M19 18v4M17 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+      <div class="div-layout reveal">
+        <div class="div-text">
+          <div class="div-eyebrow">
+            <span class="div-num div-num--beginner">01</span>
+            <span class="level-badge level-badge--beginner">Beginner</span>
+          </div>
+          <h2 class="div-title">Just getting started.</h2>
+          <p class="div-desc">New to coding? No problem. This folder has everything you need to go from zero to building your first project: setup guides, beginner-friendly tutorials, starter templates, and a curated list of tools that keep things simple.</p>
+          <ul class="div-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#2B5A14" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#2B5A14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Setup &amp; environment guides
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#2B5A14" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#2B5A14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Starter project templates
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#2B5A14" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#2B5A14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Recommended tutorials &amp; reading
+            </li>
+          </ul>
         </div>
-        <div class="pdf-card-info">
-          <h3>Beginner Rules &amp; Guidelines</h3>
-          <p>Read the full rules, judging criteria, and project requirements for the Beginner category before you start building.</p>
-        </div>
-        <a href="[BEGINNER PDF URL]" target="_blank" rel="noopener" class="pdf-card-btn">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2v8M5 7l3 3 3-3M2 11v1a2 2 0 002 2h8a2 2 0 002-2v-1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          View PDF
-        </a>
-      </div>
-
-      <!-- Tutorial Videos -->
-      <h3 class="video-section-label reveal">Tutorial Videos</h3>
-      <div class="video-grid">
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[BEGINNER VIDEO 1 EMBED URL]" title="[BEGINNER VIDEO 1 TITLE]" frameborder="0" allowfullscreen></iframe>
+        <div class="div-card div-card--beginner">
+          <div class="div-card-icon div-card-icon--beginner">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M6 10a3 3 0 0 1 3-3h6l3 3h9a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <div class="video-info">
-            <h3>[BEGINNER VIDEO 1 TITLE]</h3>
-            <p>[BEGINNER VIDEO 1 DESCRIPTION]</p>
+          <div class="div-card-body">
+            <p class="div-card-label">Google Drive Folder</p>
+            <h3 class="div-card-title">Beginner Resources</h3>
+            <p class="div-card-sub">Guides, templates, and references for the beginner division.</p>
           </div>
-        </div>
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[BEGINNER VIDEO 2 EMBED URL]" title="[BEGINNER VIDEO 2 TITLE]" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>[BEGINNER VIDEO 2 TITLE]</h3>
-            <p>[BEGINNER VIDEO 2 DESCRIPTION]</p>
-          </div>
-        </div>
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[BEGINNER VIDEO 3 EMBED URL]" title="[BEGINNER VIDEO 3 TITLE]" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>[BEGINNER VIDEO 3 TITLE]</h3>
-            <p>[BEGINNER VIDEO 3 DESCRIPTION]</p>
-          </div>
+          <a href="[BEGINNER DRIVE URL]" target="_blank" rel="noopener noreferrer" class="div-btn div-btn--beginner">
+            Open Folder
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Intermediate Section -->
-  <section class="resources-section resources-section--alt section" id="intermediate">
+  <!-- Intermediate -->
+  <section id="intermediate" class="div-section div-section--alt">
     <div class="container">
-      <div class="resources-section-header reveal">
-        <span class="level-badge level-badge--intermediate">Intermediate</span>
-        <h2 class="resources-section-title">Level Up</h2>
-        <p class="resources-section-desc">Have some experience? These tutorials tackle more complex projects and introduce new tools and concepts to push your skills further.</p>
-      </div>
-
-      <!-- PDF Guidelines -->
-      <div class="pdf-card pdf-card--intermediate reveal">
-        <div class="pdf-card-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect x="4" y="2" width="16" height="22" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M4 7h16M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <rect x="14" y="16" width="10" height="10" rx="2" fill="currentColor" opacity="0.15"/>
-            <path d="M19 18v4M17 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+      <div class="div-layout div-layout--flip reveal">
+        <div class="div-text">
+          <div class="div-eyebrow">
+            <span class="div-num div-num--intermediate">02</span>
+            <span class="level-badge level-badge--intermediate">Intermediate</span>
+          </div>
+          <h2 class="div-title">Ready to go deeper.</h2>
+          <p class="div-desc">Intermediate projects are driven by data and purpose. Think interactive dashboards that tell a story, sustainability-focused ideas that tackle real problems, and applications that pull from external APIs to do something genuinely useful. You know enough to build something that matters.</p>
         </div>
-        <div class="pdf-card-info">
-          <h3>Intermediate Rules &amp; Guidelines</h3>
-          <p>Read the full rules, judging criteria, and project requirements for the Intermediate category before you start building.</p>
-        </div>
-        <a href="[INTERMEDIATE PDF URL]" target="_blank" rel="noopener" class="pdf-card-btn pdf-card-btn--intermediate">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2v8M5 7l3 3 3-3M2 11v1a2 2 0 002 2h8a2 2 0 002-2v-1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          View PDF
-        </a>
-      </div>
-
-      <!-- Tutorial Videos -->
-      <h3 class="video-section-label reveal">Tutorial Videos</h3>
-      <div class="video-grid">
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[INTERMEDIATE VIDEO 1 EMBED URL]" title="[INTERMEDIATE VIDEO 1 TITLE]" frameborder="0" allowfullscreen></iframe>
+        <div class="div-card div-card--intermediate">
+          <div class="div-card-icon div-card-icon--intermediate">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M6 10a3 3 0 0 1 3-3h6l3 3h9a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <div class="video-info">
-            <h3>[INTERMEDIATE VIDEO 1 TITLE]</h3>
-            <p>[INTERMEDIATE VIDEO 1 DESCRIPTION]</p>
+          <div class="div-card-body">
+            <p class="div-card-label">Google Drive Folder</p>
+            <h3 class="div-card-title">Intermediate Resources</h3>
+            <p class="div-card-sub">Example projects built with a range of frameworks, libraries, and techniques to show you what's possible at this level.</p>
           </div>
-        </div>
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[INTERMEDIATE VIDEO 2 EMBED URL]" title="[INTERMEDIATE VIDEO 2 TITLE]" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>[INTERMEDIATE VIDEO 2 TITLE]</h3>
-            <p>[INTERMEDIATE VIDEO 2 DESCRIPTION]</p>
-          </div>
-        </div>
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[INTERMEDIATE VIDEO 3 EMBED URL]" title="[INTERMEDIATE VIDEO 3 TITLE]" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>[INTERMEDIATE VIDEO 3 TITLE]</h3>
-            <p>[INTERMEDIATE VIDEO 3 DESCRIPTION]</p>
-          </div>
+          <a href="https://drive.google.com/drive/folders/1etcsaSrfAFA6XTy96vUfuuEMSGCHgWe7?usp=sharing" target="_blank" rel="noopener noreferrer" class="div-btn div-btn--intermediate">
+            Open Folder
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Advanced Section -->
-  <section class="resources-section section" id="advanced">
+  <!-- Advanced -->
+  <section id="advanced" class="div-section">
     <div class="container">
-      <div class="resources-section-header reveal">
-        <span class="level-badge level-badge--advanced">Advanced</span>
-        <h2 class="resources-section-title">Go Deep</h2>
-        <p class="resources-section-desc">Ready for a challenge? These tutorials cover advanced topics and real-world problem-solving techniques for experienced builders.</p>
-      </div>
-
-      <!-- PDF Guidelines -->
-      <div class="pdf-card pdf-card--advanced reveal">
-        <div class="pdf-card-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect x="4" y="2" width="16" height="22" rx="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M4 7h16M8 12h8M8 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <rect x="14" y="16" width="10" height="10" rx="2" fill="currentColor" opacity="0.15"/>
-            <path d="M19 18v4M17 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+      <div class="div-layout reveal">
+        <div class="div-text">
+          <div class="div-eyebrow">
+            <span class="div-num div-num--advanced">03</span>
+            <span class="level-badge level-badge--advanced">Advanced</span>
+          </div>
+          <h2 class="div-title">Build something bold.</h2>
+          <p class="div-desc">Advanced projects go beyond the surface. We're talking complex backend systems, real data pipelines, external APIs stitched together to do something meaningful, and models that actually learn. If your project could ship, this is the division for you.</p>
         </div>
-        <div class="pdf-card-info">
-          <h3>Advanced Rules &amp; Guidelines</h3>
-          <p>Read the full rules, judging criteria, and project requirements for the Advanced category before you start building.</p>
-        </div>
-        <a href="[ADVANCED PDF URL]" target="_blank" rel="noopener" class="pdf-card-btn pdf-card-btn--advanced">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2v8M5 7l3 3 3-3M2 11v1a2 2 0 002 2h8a2 2 0 002-2v-1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          View PDF
-        </a>
-      </div>
-
-      <!-- Tutorial Videos -->
-      <h3 class="video-section-label reveal">Tutorial Videos</h3>
-      <div class="video-grid">
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[ADVANCED VIDEO 1 EMBED URL]" title="[ADVANCED VIDEO 1 TITLE]" frameborder="0" allowfullscreen></iframe>
+        <div class="div-card div-card--advanced">
+          <div class="div-card-icon div-card-icon--advanced">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M6 10a3 3 0 0 1 3-3h6l3 3h9a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
           </div>
-          <div class="video-info">
-            <h3>[ADVANCED VIDEO 1 TITLE]</h3>
-            <p>[ADVANCED VIDEO 1 DESCRIPTION]</p>
+          <div class="div-card-body">
+            <p class="div-card-label">Google Drive Folder</p>
+            <h3 class="div-card-title">Advanced Resources</h3>
+            <p class="div-card-sub">Example projects spanning complex frameworks, libraries, and techniques that reflect what an advanced submission looks like.</p>
           </div>
-        </div>
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[ADVANCED VIDEO 2 EMBED URL]" title="[ADVANCED VIDEO 2 TITLE]" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>[ADVANCED VIDEO 2 TITLE]</h3>
-            <p>[ADVANCED VIDEO 2 DESCRIPTION]</p>
-          </div>
-        </div>
-        <div class="video-card reveal">
-          <div class="video-embed">
-            <iframe src="[ADVANCED VIDEO 3 EMBED URL]" title="[ADVANCED VIDEO 3 TITLE]" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <h3>[ADVANCED VIDEO 3 TITLE]</h3>
-            <p>[ADVANCED VIDEO 3 DESCRIPTION]</p>
-          </div>
+          <a href="https://drive.google.com/drive/folders/1-Qqwcqu0I1QnxgHL7ByI_ejbCbPO94lL?usp=sharing" target="_blank" rel="noopener noreferrer" class="div-btn div-btn--advanced">
+            Open Folder
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -288,21 +201,31 @@
     </div>
   </footer>
 
+  <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 9l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
-  <script src="script.js"></script>
   <script>
     (function () {
+      'use strict';
+
+      const navbar    = document.getElementById('navbar');
       const navToggle = document.getElementById('navToggle');
-      const navMenu = document.getElementById('navMenu');
+      const navMenu   = document.getElementById('navMenu');
       const backToTop = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', function () {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+        backToTop.classList.toggle('visible', window.scrollY > 600);
+      }, { passive: true });
+
       navToggle.addEventListener('click', function () {
         navToggle.classList.toggle('active');
         navMenu.classList.toggle('open');
         document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
       });
+
       navMenu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
           navToggle.classList.remove('active');
@@ -310,27 +233,34 @@
           document.body.style.overflow = '';
         });
       });
-      window.addEventListener('scroll', function () {
-        backToTop.classList.toggle('visible', window.scrollY > 600);
-      }, { passive: true });
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
       backToTop.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
-      const revealElements = document.querySelectorAll('.reveal');
+
+      const revealEls = document.querySelectorAll('.reveal');
       if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(function (entries) {
+        const obs = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal'));
-              entry.target.style.transitionDelay = (siblings.indexOf(entry.target) * 80) + 'ms';
               entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
+              obs.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        revealElements.forEach(function (el) { observer.observe(el); });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(function (el) { obs.observe(el); });
       } else {
-        revealElements.forEach(function (el) { el.classList.add('visible'); });
+        revealEls.forEach(function (el) { el.classList.add('visible'); });
       }
     })();
   </script>
