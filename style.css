@@ -276,7 +276,10 @@ img { max-width: 100%; display: block; }
   .container { padding: 0 12px; }
   .hero { padding: 80px 12px 56px; }
   .hero-title { font-size: clamp(2.2rem, 12vw, 3.6rem); }
-  .countdown { flex-direction: column; align-items: center; }
+  .countdown { gap: 8px; flex-wrap: nowrap; justify-content: center; }
+  .countdown-item { min-width: 0; flex: 1; max-width: 80px; padding: 14px 6px; }
+  .countdown-number { font-size: 1.5rem; }
+  .countdown-label { font-size: 0.6rem; margin-top: 4px; }
 
   .about-grid, .details-grid, .sponsors-grid, .techshare-grid { grid-template-columns: 1fr; gap: 24px; }
   .detail-card { padding: 16px; }
@@ -683,5 +686,8 @@ a, button { touch-action: manipulation; }
   .details-grid { grid-template-columns: 1fr; }
   .sponsors-grid { grid-template-columns: 1fr 1fr; }
   .timeline-event { flex-direction: column; gap: 8px; }
-  .countdown-item { min-width: 65px; padding: 12px 10px; }
+  .countdown { gap: 6px; }
+  .countdown-item { max-width: 72px; padding: 12px 4px; }
+  .countdown-number { font-size: 1.35rem; }
+  .countdown-label { font-size: 0.55rem; }
 }
