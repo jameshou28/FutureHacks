@@ -412,14 +412,30 @@ a, button { touch-action: manipulation; }
 }
 .sponsor-box {
   background: var(--white); border: 1px dashed var(--border);
-  border-radius: var(--radius); padding: 48px 24px; text-align: center;
+  border-radius: var(--radius); padding: 24px; text-align: center;
   font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
 }
 .sponsor-box:hover {
   border-color: var(--accent-strong); border-style: solid;
   background: var(--accent); color: var(--accent-text);
 }
+.sponsor-logo {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  /* filter: grayscale(100%); */
+  /* opacity: 0.75; */
+  transition: var(--transition);
+}
+/* .sponsor-box:hover .sponsor-logo {
+  filter: none;
+  opacity: 1;
+} */
 .sponsors-contact {
   text-align: center; margin-top: 48px; font-size: 1rem; color: var(--text-secondary);
 }
