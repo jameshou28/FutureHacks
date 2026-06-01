@@ -26,6 +26,8 @@
   function pad(n) { return String(n).padStart(2, '0'); }
 
   function updateCountdown() {
+    if (!cdDays || !cdHours || !cdMinutes || !cdSeconds) return;
+
     const now = new Date();
     const diff = EVENT_DATE - now;
 
@@ -48,33 +50,39 @@
     cdSeconds.textContent = pad(seconds);
   }
 
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+  if (cdDays && cdHours && cdMinutes && cdSeconds) {
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
 
   // ——— NAVBAR SCROLL ———
   let lastScroll = 0;
   window.addEventListener('scroll', function () {
     const scrollY = window.scrollY;
-    navbar.classList.toggle('scrolled', scrollY > 60);
-    backToTop.classList.toggle('visible', scrollY > 600);
+    if (navbar) navbar.classList.toggle('scrolled', scrollY > 60);
+    if (backToTop) backToTop.classList.toggle('visible', scrollY > 600);
     lastScroll = scrollY;
   }, { passive: true });
 
   // ——— MOBILE NAV TOGGLE ———
-  navToggle.addEventListener('click', function () {
-    navToggle.classList.toggle('active');
-    navMenu.classList.toggle('open');
-    document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
-  });
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function () {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('open');
+      document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    });
+  }
 
   // Close nav on link click
-  navMenu.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      navToggle.classList.remove('active');
-      navMenu.classList.remove('open');
-      document.body.style.overflow = '';
+  if (navMenu) {
+    navMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (navToggle) navToggle.classList.remove('active');
+        navMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
     });
-  });
+  }
 
   // ——— SMOOTH SCROLL ———
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -88,9 +96,11 @@
   });
 
   // ——— BACK TO TOP ———
-  backToTop.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (backToTop) {
+    backToTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // ——— FAQ ACCORDION ———
   document.querySelectorAll('.faq-question').forEach(function (btn) {
