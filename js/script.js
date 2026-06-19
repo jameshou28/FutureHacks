@@ -156,3 +156,51 @@
   }
 
 })();
+
+// ——— JUDGE MODAL ———
+(function () {
+  const overlay = document.getElementById('judgeModal');
+  const closeBtn = document.getElementById('judgeModalClose');
+  const modalPhoto = document.getElementById('modalPhoto');
+  const modalPlaceholder = document.getElementById('modalPlaceholder');
+  const modalName = document.getElementById('modalJudgeName');
+  const modalTitle = document.getElementById('modalJudgeTitle');
+  function openModal(card) {
+    const name = card.dataset.name;
+    const title = card.dataset.title;
+    const photo = card.dataset.photo;
+
+    modalName.textContent = name;
+    modalTitle.innerHTML = title;
+
+    if (photo) {
+      modalPhoto.src = photo;
+      modalPhoto.alt = name;
+      modalPhoto.style.display = 'block';
+      modalPlaceholder.style.display = 'none';
+    } else {
+      modalPhoto.style.display = 'none';
+      modalPlaceholder.style.display = 'flex';
+    }
+
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.judge-card').forEach(function (card) {
+    card.addEventListener('click', function () { openModal(card); });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+})();
