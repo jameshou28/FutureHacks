@@ -160,6 +160,85 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px); box-shadow: 0 8px 30px rgba(30,63,14,0.3);
 }
 
+/* ===== PAGE NAV ===== */
+.page-nav { background: var(--bg-alt); padding: 64px 0; }
+.page-nav .section-eyebrow { margin-bottom: 28px; display: block; }
+.page-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.page-nav-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.page-nav-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent-text);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-nav-card:hover {
+  border-color: var(--accent-strong);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+.page-nav-card:hover::before { transform: scaleY(1); }
+.page-nav-card:hover .page-nav-arrow { transform: translateX(4px); color: var(--accent-text); }
+
+.page-nav-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--accent-text);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  background: var(--accent);
+  padding: 6px 9px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-strong);
+}
+.page-nav-body { flex: 1; min-width: 0; }
+.page-nav-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 2px;
+  letter-spacing: -0.01em;
+}
+.page-nav-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.page-nav-arrow {
+  flex-shrink: 0;
+  color: var(--border);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+@media (max-width: 900px) { .page-nav-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .page-nav-grid { grid-template-columns: 1fr; } }
+
 /* ===== ABOUT ===== */
 .about { background: var(--bg); }
 .about-grid {
