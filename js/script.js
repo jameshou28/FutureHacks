@@ -165,18 +165,13 @@
   const modalPlaceholder = document.getElementById('modalPlaceholder');
   const modalName = document.getElementById('modalJudgeName');
   const modalTitle = document.getElementById('modalJudgeTitle');
-  const modalEmail = document.getElementById('modalJudgeEmail');
-
   function openModal(card) {
     const name = card.dataset.name;
     const title = card.dataset.title;
-    const email = card.dataset.email;
     const photo = card.dataset.photo;
 
     modalName.textContent = name;
     modalTitle.innerHTML = title;
-    modalEmail.textContent = email;
-    modalEmail.href = 'mailto:' + email;
 
     if (photo) {
       modalPhoto.src = photo;
