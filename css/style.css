@@ -408,6 +408,114 @@ a, button { touch-action: manipulation; }
 }
 .faq-contact a:hover { border-color: var(--accent-text); }
 
+/* ===== JUDGES ===== */
+.judges { background: var(--bg); }
+.judges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.judge-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.judge-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-strong), var(--accent-text));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.judge-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(43,90,20,0.08); border-color: var(--accent-strong); }
+.judge-card:hover::after { transform: scaleX(1); }
+
+.judge-photo-wrap {
+  margin-bottom: 16px;
+  position: relative;
+}
+.judge-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent-text)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.judge-card:hover .judge-photo-wrap::before { opacity: 1; }
+
+.judge-photo-placeholder {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--bg-alt) 100%);
+  border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.judge-photo-placeholder::after {
+  content: '';
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  opacity: 0.4;
+}
+.judge-photo-wrap img {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  display: block;
+}
+
+.judge-info { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.judge-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 6px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.judge-title {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-text);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.judge-bio {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 10px 0 0;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  width: 100%;
+}
+
+@media (max-width: 1100px) { .judges-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .judges-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .judges-grid { grid-template-columns: 1fr; } }
+
 /* ===== SPONSORS ===== */
 .sponsors { background: var(--bg); }
 .sponsors-grid {
@@ -867,4 +975,101 @@ a, button { touch-action: manipulation; }
   .countdown-item { max-width: 72px; padding: 12px 4px; }
   .countdown-number { font-size: 1.35rem; }
   .countdown-label { font-size: 0.55rem; }
+}
+
+/* ===== JUDGE MODAL ===== */
+.judge-card { cursor: pointer; }
+
+.judge-modal-overlay {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(26, 26, 26, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.judge-modal-overlay.open {
+  opacity: 1; pointer-events: all;
+}
+.judge-modal {
+  background: var(--white);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.14);
+  padding: 40px 36px 36px;
+  max-width: 400px; width: 100%;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 20px;
+  position: relative;
+  transform: translateY(16px);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.judge-modal-overlay.open .judge-modal { transform: translateY(0); }
+
+.judge-modal-close {
+  position: absolute; top: 14px; right: 16px;
+  font-size: 1.4rem; line-height: 1;
+  color: var(--text-muted); cursor: pointer;
+  transition: color 0.2s;
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+}
+.judge-modal-close:hover { color: var(--text); background: var(--bg-alt); }
+
+.judge-modal-photo-wrap { flex-shrink: 0; }
+.judge-modal-photo {
+  width: 110px; height: 110px;
+  border-radius: 50%; object-fit: cover;
+  border: 3px solid var(--accent-strong);
+  display: block;
+}
+.judge-modal-placeholder {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--bg-alt) 100%);
+  border: 3px solid var(--accent-strong);
+  display: flex; align-items: center; justify-content: center;
+}
+.judge-modal-placeholder::after {
+  content: '';
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--accent-strong); opacity: 0.4;
+}
+
+.judge-modal-body { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; }
+.judge-modal-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--text); margin: 0;
+  letter-spacing: -0.01em;
+}
+.judge-modal-title {
+  font-family: var(--font-body);
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--accent-text);
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.judge-modal-email {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: var(--accent);
+  border: 1px solid var(--accent-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-text);
+  transition: var(--transition);
+  word-break: break-all;
+}
+.judge-modal-email:hover { background: var(--accent-hover); }
+.judge-modal-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 4px;
 }
