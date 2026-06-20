@@ -159,21 +159,25 @@
 
 // ——— SPEAKER MODAL ———
 (function () {
-  const card = document.getElementById('speakerCard');
   const overlay = document.getElementById('speakerModal');
   const closeBtn = document.getElementById('speakerModalClose');
   const modalName = document.getElementById('modalSpeakerName');
   const modalTitle = document.getElementById('modalSpeakerTitle');
   const modalDesc = document.getElementById('modalSpeakerDesc');
+  const modalPhoto = document.getElementById('modalSpeakerPhoto');
 
-  if (!card || !overlay) return;
+  if (!overlay) return;
 
-  card.addEventListener('click', function () {
-    modalName.textContent = card.dataset.speaker;
-    modalTitle.textContent = card.dataset.title;
-    modalDesc.textContent = card.dataset.description;
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
+  document.querySelectorAll('.speaker-event').forEach(function (card) {
+    card.addEventListener('click', function () {
+      modalName.textContent = card.dataset.speaker;
+      modalTitle.textContent = card.dataset.title;
+      modalDesc.textContent = card.dataset.description;
+      modalPhoto.src = card.dataset.photo;
+      modalPhoto.alt = card.dataset.speaker;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
   });
 
   function closeModal() {

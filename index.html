@@ -171,11 +171,21 @@
                 <p>Start building your projects!</p>
               </div>
             </div>
-            <div class="timeline-event">
+            <div class="timeline-event speaker-event"
+              data-speaker="Molly Cantillon"
+              data-title="TBD"
+              data-description="TBD"
+              data-photo="assets/mollycantillon.png">
               <span class="timeline-time">12:00 PM</span>
               <div class="timeline-event-info">
-                <h4>Speaker Series: TBD</h4>
-                <p>TBD</p>
+                <div class="speaker-card-inner">
+                  <img src="assets/mollycantillon.png" alt="Molly Cantillon" class="speaker-thumb">
+                  <div>
+                    <h4>Speaker Series: Molly Cantillon</h4>
+                    <p class="speaker-session-title">TBD</p>
+                    <span class="speaker-learn-more">Click to learn more →</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -519,7 +529,7 @@
     <div class="judge-modal speaker-modal">
       <button class="judge-modal-close" id="speakerModalClose" aria-label="Close">&times;</button>
       <div class="judge-modal-photo-wrap">
-        <img src="assets/judgephotos/swarnamalyamohan.png" alt="Swarnamalya Mohan" class="judge-modal-photo">
+        <img id="modalSpeakerPhoto" src="" alt="" class="judge-modal-photo">
       </div>
       <div class="judge-modal-body">
         <h3 class="judge-modal-name" id="modalSpeakerName"></h3>
