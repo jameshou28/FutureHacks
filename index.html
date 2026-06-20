@@ -171,19 +171,21 @@
                 <p>Start building your projects!</p>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="timeline-day reveal">
-          <div class="timeline-day-header">
-            <span class="timeline-badge">Day 2</span>
-            <h3>Thursday, June 25th, 2026</h3>
-          </div>
-          <div class="timeline-events">
-            <div class="timeline-event">
-              <span class="timeline-time">TBD</span>
+            <div class="timeline-event speaker-event"
+              data-speaker="Molly Cantillon"
+              data-title="TBD"
+              data-description="TBD"
+              data-photo="assets/mollycantillon.png">
+              <span class="timeline-time">12:00 PM</span>
               <div class="timeline-event-info">
-                <h4>Speaker Series: TBD</h4>
-                <p>TBD</p>
+                <div class="speaker-card-inner">
+                  <img src="assets/mollycantillon.png" alt="Molly Cantillon" class="speaker-thumb">
+                  <div>
+                    <h4>Speaker Series: Molly Cantillon</h4>
+                    <p class="speaker-session-title">TBD</p>
+                    <span class="speaker-learn-more">Click to learn more →</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -194,11 +196,21 @@
             <h3>Friday, June 26th, 2026</h3>
           </div>
           <div class="timeline-events">
-            <div class="timeline-event">
+            <div class="timeline-event speaker-event" id="speakerCard"
+              data-title="Beyond Prompting: Train and Adapt Your Own Language Model"
+              data-speaker="Swarnamalya Mohan"
+              data-photo="assets/judgephotos/swarnamalyamohan.png"
+              data-description="Beyond Prompting: Train and Adapt Your Own Language Model is a hands-on session that takes participants through the full journey of adapting a language model for a specialized task. The session begins with the foundations of model training, including how language models learn from data, how training examples are structured, and how loss and evaluation metrics guide improvement. Participants will then explore how to prepare a task-specific dataset, establish a baseline, and fine-tune a pretrained model using parameter-efficient techniques such as LoRA and QLoRA. The session will also demonstrate how to compare model behavior before and after training, evaluate whether the model has genuinely improved, and identify common issues such as overfitting, poor data quality, and unstable outputs. By the end, attendees will understand how to move beyond prompt engineering and build a repeatable workflow for training, evaluating, and adapting language models without requiring massive compute resources.">
               <span class="timeline-time">3:00 PM</span>
               <div class="timeline-event-info">
-                <h4>Speaker Series: TBD</h4>
-                <p>TBD</p>
+                <div class="speaker-card-inner">
+                  <img src="assets/judgephotos/swarnamalyamohan.png" alt="Swarnamalya Mohan" class="speaker-thumb">
+                  <div>
+                    <h4>Speaker Series: Swarnamalya Mohan</h4>
+                    <p class="speaker-session-title">Beyond Prompting: Train and Adapt Your Own Language Model</p>
+                    <span class="speaker-learn-more">Click to learn more →</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -383,13 +395,13 @@
       <h2 class="section-heading reveal">Meet the Judges</h2>
       <div class="judges-grid">
 
-        <div class="judge-card reveal" data-name="Swarnamalya Mohan" data-title="Applied AI/ML at FedEx" data-email="swarnamalya65@gmail.com" data-photo="">
+        <div class="judge-card reveal" data-name="Swarnamalya Mohan" data-title="Senior Full Stack Developer AI/ML at FedEx" data-email="swarnamalya65@gmail.com" data-photo="assets/judgephotos/swarnamalyamohan.png" data-bio="Swarnamalya Mohan is a Senior AI/ML Advisor at FedEx, specializing in enterprise AI solutions, model training, machine learning workflows, and intelligent package image processing models for logistics and supply chain systems. She brings expertise in software engineering, AI agents, image classification, and scalable technology solutions that drive operational efficiency.">
           <div class="judge-photo-wrap">
-            <div class="judge-photo-placeholder"></div>
+            <img src="assets/judgephotos/swarnamalyamohan.png" alt="Swarnamalya Mohan">
           </div>
           <div class="judge-info">
             <h3 class="judge-name">Swarnamalya Mohan</h3>
-            <span class="judge-title">Applied AI/ML at FedEx</span>
+            <span class="judge-title">Senior Full Stack Developer AI/ML at FedEx</span>
           </div>
         </div>
 
@@ -463,6 +475,16 @@
           </div>
         </div>
 
+        <div class="judge-card reveal" data-name="Divyaraj Singh Jatav" data-title="Supply Chain Analyst 2 at Amazon" data-email="divyaraj.singh.dj@gmail.com" data-photo="assets/judgephotos/divyarajsinghjatav.png" data-bio="Divyaraj Singh Jatav is a supply chain professional and doctoral scholar specializing in AI-driven decision-making and digital transformation.">
+          <div class="judge-photo-wrap">
+            <img src="assets/judgephotos/divyarajsinghjatav.png" alt="Divyaraj Singh Jatav">
+          </div>
+          <div class="judge-info">
+            <h3 class="judge-name">Divyaraj Singh Jatav</h3>
+            <span class="judge-title">Supply Chain Analyst 2 at Amazon</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -508,6 +530,22 @@
       <div class="judge-modal-body">
         <h3 class="judge-modal-name" id="modalJudgeName"></h3>
         <span class="judge-modal-title" id="modalJudgeTitle"></span>
+        <p class="judge-modal-bio" id="modalJudgeBio"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Speaker Modal -->
+  <div class="judge-modal-overlay" id="speakerModal" role="dialog" aria-modal="true" aria-labelledby="modalSpeakerTitle">
+    <div class="judge-modal speaker-modal">
+      <button class="judge-modal-close" id="speakerModalClose" aria-label="Close">&times;</button>
+      <div class="judge-modal-photo-wrap">
+        <img id="modalSpeakerPhoto" src="" alt="" class="judge-modal-photo">
+      </div>
+      <div class="judge-modal-body">
+        <h3 class="judge-modal-name" id="modalSpeakerName"></h3>
+        <span class="judge-modal-title" id="modalSpeakerTitle"></span>
+        <p class="judge-modal-bio" id="modalSpeakerDesc"></p>
       </div>
     </div>
   </div>

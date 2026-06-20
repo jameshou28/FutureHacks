@@ -157,6 +157,43 @@
 
 })();
 
+// ——— SPEAKER MODAL ———
+(function () {
+  const overlay = document.getElementById('speakerModal');
+  const closeBtn = document.getElementById('speakerModalClose');
+  const modalName = document.getElementById('modalSpeakerName');
+  const modalTitle = document.getElementById('modalSpeakerTitle');
+  const modalDesc = document.getElementById('modalSpeakerDesc');
+  const modalPhoto = document.getElementById('modalSpeakerPhoto');
+
+  if (!overlay) return;
+
+  document.querySelectorAll('.speaker-event').forEach(function (card) {
+    card.addEventListener('click', function () {
+      modalName.textContent = card.dataset.speaker;
+      modalTitle.textContent = card.dataset.title;
+      modalDesc.textContent = card.dataset.description;
+      modalPhoto.src = card.dataset.photo;
+      modalPhoto.alt = card.dataset.speaker;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+})();
+
 // ——— JUDGE MODAL ———
 (function () {
   const overlay = document.getElementById('judgeModal');
@@ -165,13 +202,18 @@
   const modalPlaceholder = document.getElementById('modalPlaceholder');
   const modalName = document.getElementById('modalJudgeName');
   const modalTitle = document.getElementById('modalJudgeTitle');
+  const modalBio = document.getElementById('modalJudgeBio');
+
   function openModal(card) {
     const name = card.dataset.name;
     const title = card.dataset.title;
     const photo = card.dataset.photo;
+    const bio = card.dataset.bio || '';
 
     modalName.textContent = name;
     modalTitle.innerHTML = title;
+    modalBio.textContent = bio;
+    modalBio.style.display = bio ? 'block' : 'none';
 
     if (photo) {
       modalPhoto.src = photo;
