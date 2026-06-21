@@ -681,7 +681,7 @@ a, button { touch-action: manipulation; }
 }
 .footer-links a:hover { color: var(--accent-text); }
 .footer-bottom { padding: 20px 0; text-align: center; }
-.footer-bottom p { font-size: 0.8rem; color: var(--text-muted); }
+.footer-bottom p { font-size: 0.8rem; color: var(--text-secondary); }
 
 /* ===== BACK TO TOP ===== */
 .back-to-top {
