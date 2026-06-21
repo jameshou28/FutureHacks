@@ -9,7 +9,7 @@
   --green-dark: #1E3F0E;
   --text: #1A1A1A;
   --text-secondary: #555;
-  --text-muted: #888;
+  --text-muted: #6B6B6B;
   --border: #E2E2DB;
   --white: #FFFFFF;
   --radius: 12px;
@@ -1038,6 +1038,19 @@ a, button { touch-action: manipulation; }
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Fallback: if the user prefers reduced motion, show content immediately
+   with no animation rather than fading on scroll. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Fallback: if JavaScript is disabled the IntersectionObserver never runs,
+   so force all reveal content visible. (scripting: none) covers no-JS
+   browsers; the <noscript> block in each page covers JS errors/blocking. */
+@media (scripting: none) {
+  .reveal { opacity: 1; transform: none; }
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
