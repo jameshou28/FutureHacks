@@ -55,10 +55,33 @@
       font-family: var(--font-display);
       font-size: clamp(4rem, 12vw, 7rem);
       font-weight: 900;
-      color: var(--accent-strong);
+      color: var(--accent-text);
       line-height: 1;
       margin-bottom: 20px;
       letter-spacing: -0.05em;
+    }
+    .status-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--green-dark);
+      padding: 16px 40px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      transition: var(--transition);
+    }
+    .btn-secondary:hover {
+      border-color: var(--green-dark);
+      transform: translateY(-2px);
     }
     .status-title {
       font-family: var(--font-display);
@@ -80,9 +103,12 @@
 
   <main class="status-page">
     <div class="status-content">
-      <div class="status-code">Coming Soon!</div>
-      <p class="status-text">Registration for FutureHacks is not open yet. Check back soon for the sign-up link and event updates.</p>
-      <a href="/" class="btn-primary">Return to Home</a>
+      <div class="status-code">Register Now</div>
+      <p class="status-text">Registration for FutureHacks is open on Devpost. Sign up to join the hackathon and get event updates.</p>
+      <div class="status-actions">
+        <a href="https://futurehacks.devpost.com" target="_blank" rel="noopener" class="btn-primary">Register on Devpost</a>
+        <a href="/" class="btn-secondary">Return to Home</a>
+      </div>
     </div>
   </main>
 </body>
