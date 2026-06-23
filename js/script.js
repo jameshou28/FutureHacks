@@ -162,7 +162,9 @@
   const overlay = document.getElementById('speakerModal');
   const closeBtn = document.getElementById('speakerModalClose');
   const modalName = document.getElementById('modalSpeakerName');
-  const modalTitle = document.getElementById('modalSpeakerTitle');
+  const modalRole = document.getElementById('modalSpeakerRole');
+  const modalTalkTitle = document.getElementById('modalSpeakerTalkTitle');
+  const modalBio = document.getElementById('modalSpeakerBio');
   const modalDesc = document.getElementById('modalSpeakerDesc');
   const modalPhoto = document.getElementById('modalSpeakerPhoto');
 
@@ -170,11 +172,21 @@
 
   document.querySelectorAll('.speaker-event').forEach(function (card) {
     card.addEventListener('click', function () {
+      const role = card.dataset.role || '';
+      const bio = card.dataset.bio || '';
+
       modalName.textContent = card.dataset.speaker;
-      modalTitle.textContent = card.dataset.title;
+      modalTalkTitle.textContent = card.dataset.title;
       modalDesc.textContent = card.dataset.description;
       modalPhoto.src = card.dataset.photo;
       modalPhoto.alt = card.dataset.speaker;
+
+      modalRole.textContent = role;
+      modalRole.style.display = role ? 'block' : 'none';
+
+      modalBio.textContent = bio;
+      modalBio.style.display = bio ? 'block' : 'none';
+
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
     });

@@ -1,3 +1,4 @@
 *.txt
 /.agent
 .DS_Store
+.gstack
