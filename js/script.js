@@ -129,25 +129,16 @@
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry, i) {
         if (entry.isIntersecting) {
-          // Stagger siblings
+          // Stagger siblings (capped so long groups don't drag)
           const siblings = entry.target.parentElement.querySelectorAll('.reveal');
-          let delay = 0;
-          siblings.forEach(function (sib) {
-            if (sib === entry.target) {
-              entry.target.style.transitionDelay = delay + 'ms';
-            }
-            delay += 80;
-          });
-          // Find the index of this element among its siblings
-          const sibArray = Array.from(siblings);
-          const idx = sibArray.indexOf(entry.target);
-          entry.target.style.transitionDelay = (idx * 80) + 'ms';
+          const idx = Array.from(siblings).indexOf(entry.target);
+          entry.target.style.transitionDelay = Math.min(idx * 35, 175) + 'ms';
 
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
 
     revealElements.forEach(function (el) { observer.observe(el); });
   } else {

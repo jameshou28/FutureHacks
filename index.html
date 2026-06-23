@@ -1,19 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FutureHacks</title>
-  <meta name="description" content="FutureHacks">
+  <title>FutureHacks 2026 — Virtual Student Hackathon | TechShare</title>
+  <meta name="description" content="FutureHacks is a free virtual hackathon for students of all skill levels, hosted by the TechShare Project. June 24–28, 2026 — build real projects, learn to code, and win prizes. Register on Devpost today.">
+  <meta name="author" content="James Hou and Arun Damodaran">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://futurehacks.techshareproject.org/">
+
+  <!-- Open Graph / Facebook / Discord / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FutureHacks">
+  <meta property="og:title" content="FutureHacks 2026 — Virtual Student Hackathon">
+  <meta property="og:description" content="A free virtual hackathon for students of all skill levels, hosted by the TechShare Project. June 24–28, 2026. Build, learn, and win prizes.">
+  <meta property="og:url" content="https://futurehacks.techshareproject.org/">
+  <meta property="og:image" content="https://futurehacks.techshareproject.org/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FutureHacks — Build the city of tomorrow, today.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FutureHacks 2026 — Virtual Student Hackathon">
+  <meta name="twitter:description" content="A free virtual hackathon for students of all skill levels, hosted by the TechShare Project. June 24–28, 2026.">
+  <meta name="twitter:image" content="https://futurehacks.techshareproject.org/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="FutureHacks — Build the city of tomorrow, today.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- If JS is disabled, scroll-reveal never fires; show all content. -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="shortcut icon" href="assets/favicon.png">
   <meta name="theme-color" content="#0f172a">
+
+  <!-- Structured data: Event (Google rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "FutureHacks 2026",
+    "description": "FutureHacks is a free virtual hackathon for students of all skill levels, hosted by the TechShare Project. Build real projects, learn to code, and win prizes.",
+    "startDate": "2026-06-24",
+    "endDate": "2026-06-28",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "isAccessibleForFree": true,
+    "url": "https://futurehacks.techshareproject.org/",
+    "image": ["https://futurehacks.techshareproject.org/assets/og-image.jpg"],
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://futurehacks.techshareproject.org/"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "The TechShare Project",
+      "url": "https://www.techshareproject.org/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://futurehacks.devpost.com/"
+    }
+  }
+  </script>
+
   <!-- Vercel Web Analytics -->
   <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+
+  <!-- Built by James Hou and Arun Damodaran. -->
 </head>
 <body>
   <!-- Grain Overlay -->
@@ -39,6 +100,7 @@
     </div>
   </nav>
 
+  <main id="main">
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-decor">
@@ -95,7 +157,7 @@
       <div class="techshare-stack">
         <div class="detail-card techshare-card">
           <a href="https://www.techshareproject.org/" target="_blank" rel="noopener" aria-label="TechShare Project">
-            <img src="assets/TechShareLogo.png" alt="TechShare logo" class="techshare-img">
+            <img src="assets/TechShareLogo.png" alt="TechShare logo" class="techshare-img" width="596" height="594">
           </a>
         </div>
         <div class="techshare-copy">
@@ -171,7 +233,7 @@
                 <p>Start building your projects!</p>
               </div>
             </div>
-            <div class="timeline-event speaker-event"
+            <!-- <div class="timeline-event speaker-event"
               data-speaker="Molly Cantillon"
               data-title="TBD"
               data-description="TBD"
@@ -187,7 +249,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="timeline-day reveal">
@@ -340,47 +402,47 @@
       <div class="sponsors-grid">
         <div class="sponsor-box reveal">
           <a href="https://codecrafters.io" target="_blank">
-            <img src="assets/codecrafters.png" alt="CodeCrafters" class="sponsor-logo">
+            <img src="assets/sponsors/codecrafters.png" alt="CodeCrafters" class="sponsor-logo" width="600" height="77">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://gen.xyz/" target="_blank">
-            <img src="assets/xyz-logo-color.png" alt=".xyz" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/xyz-logo-color.png" alt=".xyz" width="301" height="176" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://nordvpn.com" target="_blank">
-            <img src="assets/nordvpn.png" alt="NordVPN" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/nordvpn.png" alt="NordVPN" width="1600" height="746" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://nordpass.com" target="_blank">
-            <img src="assets/nordpass.png" alt="NordPass" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/nordpass.png" alt="NordPass" width="2000" height="442" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://coveron.com" target="_blank">
-            <img src="assets/coveron.png" alt="Coveron" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/coveron.png" alt="Coveron" width="1816" height="747" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://incogni.com" target="_blank">
-            <img src="assets/incogni.png" alt="Incogni" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/incogni.png" alt="Incogni" width="3700" height="1701" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://saily.com" target="_blank">
-            <img src="assets/saily.png" alt="Saily" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/saily.png" alt="Saily" width="1738" height="1067" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://www.pcbway.com" target="_blank">
-            <img src="assets/PCBway.png" alt="PCBWay" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/PCBway.png" alt="PCBWay" width="1897" height="631" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
         <div class="sponsor-box reveal" style="display: flex; align-items: center; justify-content: center;">
           <a href="https://www.interviewcake.com/" target="_blank">
-            <img src="assets/interviewcakelogo.png" alt="InterviewCake" style="max-width: 100%; max-height: 80px; object-fit: contain;">
+            <img src="assets/sponsors/interviewcakelogo.png" alt="InterviewCake" width="1024" height="682" style="max-width: 100%; max-height: 80px; object-fit: contain;">
           </a>
         </div>
       </div>
@@ -448,17 +510,17 @@
         <div class="judge-card reveal" data-name="Mayur Jain" data-title="Senior Software Engineer at Bridgestone Americas" data-email="mayurjainsr@gmail.com" data-photo="assets/judgephotos/mayurjain.png">
           <div class="judge-photo-wrap">
             <img src="assets/judgephotos/mayurjain.png" alt="Mayur Jain">
-          </div>
+          </div> 
           <div class="judge-info">
             <h3 class="judge-name">Mayur Jain</h3>
             <span class="judge-title">Senior Software Engineer at Bridgestone Americas</span>
           </div>
-        </div>
+        </div> 
 
         <div class="judge-card reveal" data-name="Naga Deepak Pothuraju" data-title="Senior Engineering Manager at TikTok" data-email="nagadeepakpothuraju@gmail.com" data-photo="assets/judgephotos/nagadeepakpothuraju.jpg">
           <div class="judge-photo-wrap">
             <img src="assets/judgephotos/nagadeepakpothuraju.jpg" alt="Naga Deepak Pothuraju">
-          </div>
+          </div> 
           <div class="judge-info">
             <h3 class="judge-name">Naga Deepak Pothuraju</h3>
             <span class="judge-title">Senior Engineering Manager at TikTok</span>
@@ -518,6 +580,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -532,14 +595,14 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
             <span>Instagram</span>
           </a>
-          <a href="mailto:projecttechshare@gmail.com" aria-label="Email">
+          <a href="mailto:projecttechshare@gmail.com">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>projecttechshare@gmail.com</span>
           </a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 TechShareProject. All rights reserved.</p>
+        <p>&copy; 2026 TechShareProject. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -550,7 +613,7 @@
   </button>
 
   <!-- Judge Modal -->
-  <div class="judge-modal-overlay" id="judgeModal" role="dialog" aria-modal="true" aria-labelledby="modalJudgeName">
+  <div class="judge-modal-overlay" id="judgeModal" role="dialog" aria-modal="true" aria-label="Judge details" aria-labelledby="modalJudgeName">
     <div class="judge-modal">
       <button class="judge-modal-close" id="judgeModalClose" aria-label="Close">&times;</button>
       <div class="judge-modal-photo-wrap">
@@ -563,10 +626,10 @@
         <p class="judge-modal-bio" id="modalJudgeBio"></p>
       </div>
     </div>
-  </div>
+  </div> 
 
   <!-- Speaker Modal -->
-  <div class="judge-modal-overlay" id="speakerModal" role="dialog" aria-modal="true" aria-labelledby="modalSpeakerTitle">
+  <div class="judge-modal-overlay" id="speakerModal" role="dialog" aria-modal="true" aria-label="Speaker details" aria-labelledby="modalSpeakerTitle">
     <div class="judge-modal speaker-modal">
       <button class="judge-modal-close" id="speakerModalClose" aria-label="Close">&times;</button>
       <div class="judge-modal-photo-wrap">
