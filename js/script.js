@@ -10,7 +10,9 @@
   //   new Date('June 15, 2026 09:00:00')
   //   new Date('August 1, 2026 18:30:00')
   //   new Date('2026-06-15T09:00:00-04:00')  ← with timezone offset
-  const EVENT_DATE = new Date('June 24, 2026 08:00:00');
+  // 8:00 AM EDT (UTC−4). The explicit offset pins the target to EDT for every
+  // visitor regardless of their local timezone.
+  const EVENT_DATE = new Date('2026-06-24T08:00:00-04:00');
 
   // ——— DOM REFS ———
   const navbar = document.getElementById('navbar');
