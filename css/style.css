@@ -522,6 +522,28 @@ a, button { touch-action: manipulation; }
   margin: 0;
   text-align: left;
 }
+.speaker-modal-join-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 1px solid var(--accent-strong);
+  border-radius: 6px;
+  transition: background 0.15s, transform 0.15s;
+  align-self: flex-start;
+}
+.speaker-modal-join-link:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
 @media (max-width: 720px) {
   .judge-modal.speaker-modal { padding: 36px 28px 32px; }
   .speaker-modal-layout { flex-direction: column; gap: 28px; }

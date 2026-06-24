@@ -160,6 +160,7 @@
   const modalBio = document.getElementById('modalSpeakerBio');
   const modalDesc = document.getElementById('modalSpeakerDesc');
   const modalPhoto = document.getElementById('modalSpeakerPhoto');
+  const modalLink = document.getElementById('modalSpeakerLink');
 
   if (!overlay) return;
 
@@ -167,6 +168,7 @@
     card.addEventListener('click', function () {
       const role = card.dataset.role || '';
       const bio = card.dataset.bio || '';
+      const link = card.dataset.link || '';
 
       modalName.textContent = card.dataset.speaker;
       modalTalkTitle.textContent = card.dataset.title;
@@ -179,6 +181,13 @@
 
       modalBio.textContent = bio;
       modalBio.style.display = bio ? 'block' : 'none';
+
+      if (link && modalLink) {
+        modalLink.href = link;
+        modalLink.style.display = 'inline-flex';
+      } else if (modalLink) {
+        modalLink.style.display = 'none';
+      }
 
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
