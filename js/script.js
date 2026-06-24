@@ -10,7 +10,9 @@
   //   new Date('June 15, 2026 09:00:00')
   //   new Date('August 1, 2026 18:30:00')
   //   new Date('2026-06-15T09:00:00-04:00')  ← with timezone offset
-  const EVENT_DATE = new Date('June 24, 2026 08:00:00');
+  // 8:00 AM EDT (UTC−4). The explicit offset pins the target to EDT for every
+  // visitor regardless of their local timezone.
+  const EVENT_DATE = new Date('2026-06-24T08:00:00-04:00');
 
   // ——— DOM REFS ———
   const navbar = document.getElementById('navbar');
@@ -153,7 +155,9 @@
   const overlay = document.getElementById('speakerModal');
   const closeBtn = document.getElementById('speakerModalClose');
   const modalName = document.getElementById('modalSpeakerName');
-  const modalTitle = document.getElementById('modalSpeakerTitle');
+  const modalRole = document.getElementById('modalSpeakerRole');
+  const modalTalkTitle = document.getElementById('modalSpeakerTalkTitle');
+  const modalBio = document.getElementById('modalSpeakerBio');
   const modalDesc = document.getElementById('modalSpeakerDesc');
   const modalPhoto = document.getElementById('modalSpeakerPhoto');
 
@@ -161,11 +165,21 @@
 
   document.querySelectorAll('.speaker-event').forEach(function (card) {
     card.addEventListener('click', function () {
+      const role = card.dataset.role || '';
+      const bio = card.dataset.bio || '';
+
       modalName.textContent = card.dataset.speaker;
-      modalTitle.textContent = card.dataset.title;
+      modalTalkTitle.textContent = card.dataset.title;
       modalDesc.textContent = card.dataset.description;
       modalPhoto.src = card.dataset.photo;
       modalPhoto.alt = card.dataset.speaker;
+
+      modalRole.textContent = role;
+      modalRole.style.display = role ? 'block' : 'none';
+
+      modalBio.textContent = bio;
+      modalBio.style.display = bio ? 'block' : 'none';
+
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
     });
