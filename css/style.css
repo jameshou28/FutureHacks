@@ -434,6 +434,7 @@ a, button { touch-action: manipulation; }
   transition: var(--transition);
 }
 .timeline-event:hover { border-color: var(--accent-strong); box-shadow: var(--shadow); }
+.timeline-event-link { text-decoration: none; color: inherit; cursor: pointer; }
 .timeline-time {
   font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500;
   color: var(--accent-text); white-space: nowrap; padding-top: 2px; min-width: 80px;
