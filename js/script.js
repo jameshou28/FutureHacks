@@ -184,6 +184,9 @@
 
       if (link && modalLink) {
         modalLink.href = link;
+        modalLink.textContent = /youtube\.com|youtu\.be/.test(link)
+          ? 'Watch on YouTube →'
+          : 'Join session →';
         modalLink.style.display = 'inline-flex';
       } else if (modalLink) {
         modalLink.style.display = 'none';
