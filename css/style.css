@@ -19,7 +19,7 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Karla', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: 'JetBrains Mono', monospace; 
 }
 
 /* ===== RESET ===== */
@@ -95,6 +95,7 @@ img { max-width: 100%; display: block; }
   padding: 8px 20px; border-radius: 100px; font-weight: 600;
   transition: var(--transition);
 }
+
 .nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 4px; z-index: 1001; position: relative; }
 .nav-toggle span {
