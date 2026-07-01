@@ -84,6 +84,34 @@
     }
 
     /* Stay Connected CTAs */
+    .win-connect-panel {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 16px;
+      background: var(--white);
+      border: 1.5px solid var(--accent-strong);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .win-connect-panel::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+      background: linear-gradient(180deg, #5865F2, var(--accent-strong));
+    }
+    .win-connect-label {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent-text);
+    }
+    .win-connect-label-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #5865F2;
+      box-shadow: 0 0 0 4px rgba(88,101,242,0.15);
+    }
     .win-connect { display: flex; flex-wrap: wrap; gap: 14px; }
     .win-connect-btn {
       display: inline-flex; align-items: center; gap: 10px;
@@ -93,14 +121,21 @@
     }
     .win-connect-btn--discord {
       background: #5865F2; color: #fff;
-      box-shadow: 0 4px 16px rgba(88,101,242,0.25);
+      box-shadow: 0 4px 16px rgba(88,101,242,0.35);
     }
-    .win-connect-btn--discord:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(88,101,242,0.35); }
+    .win-connect-btn--discord:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(88,101,242,0.45); }
     .win-connect-btn--instagram {
-      background: var(--accent); color: var(--accent-text);
-      border: 1.5px solid var(--accent-strong);
+      background: linear-gradient(135deg, #FEDA75 0%, #FA7E1E 25%, #D62976 50%, #962FBF 75%, #4F5BD5 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(214,41,118,0.35);
     }
-    .win-connect-btn--instagram:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .win-connect-btn--instagram:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(214,41,118,0.45); }
+
+    @media (max-width: 600px) {
+      .win-connect-panel { width: 100%; padding: 20px; }
+      .win-connect { flex-direction: column; }
+      .win-connect-btn { width: 100%; justify-content: center; }
+    }
 
     /* Winners section */
     .winners-section { background: var(--bg); }
@@ -272,7 +307,7 @@
       font-size: 1rem; color: var(--text-secondary);
       max-width: 560px; margin: 0 auto 32px; line-height: 1.75;
     }
-    .win-closing .win-connect { justify-content: center; }
+    .win-closing .win-connect-panel { margin: 0 auto; text-align: left; }
 
     /* Responsive */
     @media (max-width: 700px) {
@@ -315,16 +350,19 @@
       <span class="win-hero-badge reveal">FutureHacks 2026 Results</span>
       <h1 class="win-hero-title reveal">Meet the Winners</h1>
       <p class="win-hero-sub reveal">Congratulations to our winners, and to everyone who submitted! Building something from scratch in a few days is no small feat, and every single team should be proud of what they shipped.</p>
-      <p class="win-hero-sub2 reveal">We hope you learned something new, met great people, and had fun along the way. This is just the beginning — stay connected with us below to hear about future hackathons, events, and initiatives.</p>
-      <div class="win-connect reveal">
-        <a href="https://discord.gg/wq4PSXcQJ" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--discord">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.27 5.33A18.27 18.27 0 0 0 15.14 4c-.19.34-.4.79-.55 1.15a16.9 16.9 0 0 0-5.18 0A9.4 9.4 0 0 0 8.86 4a18.2 18.2 0 0 0-4.14 1.33C2.24 8.9 1.57 12.38 1.9 15.81a18.4 18.4 0 0 0 5.6 2.83c.46-.62.86-1.28 1.2-1.98-.66-.25-1.29-.55-1.89-.92.16-.12.32-.24.47-.37a13.1 13.1 0 0 0 11.24 0c.15.13.31.25.47.37-.6.37-1.23.67-1.89.92.34.7.74 1.36 1.2 1.98a18.35 18.35 0 0 0 5.6-2.83c.4-3.98-.62-7.43-2.63-10.48ZM8.68 13.7c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Zm6.64 0c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Z" fill="currentColor"/></svg>
-          <span>Join our Discord</span>
-        </a>
-        <a href="https://www.instagram.com/techshareproject/" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
-          <span>Follow on Instagram</span>
-        </a>
+      <p class="win-hero-sub2 reveal">We hope you learned something new, met great people, and had fun along the way. This is just the beginning!</p>
+      <div class="win-connect-panel reveal">
+        <span class="win-connect-label"><span class="win-connect-label-dot" aria-hidden="true"></span>Stay Connected</span>
+        <div class="win-connect">
+          <a href="https://discord.gg/wq4PSXcQJ" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.27 5.33A18.27 18.27 0 0 0 15.14 4c-.19.34-.4.79-.55 1.15a16.9 16.9 0 0 0-5.18 0A9.4 9.4 0 0 0 8.86 4a18.2 18.2 0 0 0-4.14 1.33C2.24 8.9 1.57 12.38 1.9 15.81a18.4 18.4 0 0 0 5.6 2.83c.46-.62.86-1.28 1.2-1.98-.66-.25-1.29-.55-1.89-.92.16-.12.32-.24.47-.37a13.1 13.1 0 0 0 11.24 0c.15.13.31.25.47.37-.6.37-1.23.67-1.89.92.34.7.74 1.36 1.2 1.98a18.35 18.35 0 0 0 5.6-2.83c.4-3.98-.62-7.43-2.63-10.48ZM8.68 13.7c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Zm6.64 0c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Z" fill="currentColor"/></svg>
+            <span>Join the TechShare Discord Server</span>
+          </a>
+          <a href="https://www.instagram.com/techshareproject/" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+            <span>Follow us on Instagram</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -440,16 +478,19 @@
   <section class="win-closing section">
     <div class="container">
       <h2 class="win-closing-heading reveal">Thanks for building with us</h2>
-      <p class="win-closing-sub reveal">Congratulations again to every team who submitted a project. Stay connected to hear about future hackathons, events, and initiatives from TechShare.</p>
-      <div class="win-connect reveal">
-        <a href="https://discord.gg/wq4PSXcQJ" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--discord">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.27 5.33A18.27 18.27 0 0 0 15.14 4c-.19.34-.4.79-.55 1.15a16.9 16.9 0 0 0-5.18 0A9.4 9.4 0 0 0 8.86 4a18.2 18.2 0 0 0-4.14 1.33C2.24 8.9 1.57 12.38 1.9 15.81a18.4 18.4 0 0 0 5.6 2.83c.46-.62.86-1.28 1.2-1.98-.66-.25-1.29-.55-1.89-.92.16-.12.32-.24.47-.37a13.1 13.1 0 0 0 11.24 0c.15.13.31.25.47.37-.6.37-1.23.67-1.89.92.34.7.74 1.36 1.2 1.98a18.35 18.35 0 0 0 5.6-2.83c.4-3.98-.62-7.43-2.63-10.48ZM8.68 13.7c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Zm6.64 0c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Z" fill="currentColor"/></svg>
-          <span>Join our Discord</span>
-        </a>
-        <a href="https://www.instagram.com/techshareproject/" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
-          <span>Follow on Instagram</span>
-        </a>
+      <p class="win-closing-sub reveal">Congratulations again to every team who submitted a project.</p>
+      <div class="win-connect-panel reveal">
+        <span class="win-connect-label"><span class="win-connect-label-dot" aria-hidden="true"></span>Stay Connected</span>
+        <div class="win-connect">
+          <a href="https://discord.gg/wq4PSXcQJ" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.27 5.33A18.27 18.27 0 0 0 15.14 4c-.19.34-.4.79-.55 1.15a16.9 16.9 0 0 0-5.18 0A9.4 9.4 0 0 0 8.86 4a18.2 18.2 0 0 0-4.14 1.33C2.24 8.9 1.57 12.38 1.9 15.81a18.4 18.4 0 0 0 5.6 2.83c.46-.62.86-1.28 1.2-1.98-.66-.25-1.29-.55-1.89-.92.16-.12.32-.24.47-.37a13.1 13.1 0 0 0 11.24 0c.15.13.31.25.47.37-.6.37-1.23.67-1.89.92.34.7.74 1.36 1.2 1.98a18.35 18.35 0 0 0 5.6-2.83c.4-3.98-.62-7.43-2.63-10.48ZM8.68 13.7c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Zm6.64 0c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Z" fill="currentColor"/></svg>
+            <span>Join the TechShare Discord Server</span>
+          </a>
+          <a href="https://www.instagram.com/techshareproject/" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+            <span>Follow us on Instagram</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
