@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winners — FutureHacks 2026</title>
+  <meta name="description" content="Meet the winning teams of FutureHacks 2026 — Overall, Advanced, Intermediate, and Beginner track champions.">
+  <meta name="author" content="James Hou and Arun Damodaran">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://futurehacks.techshareproject.org/winners">
+
+  <!-- Open Graph / Facebook / Discord / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FutureHacks">
+  <meta property="og:title" content="Winners — FutureHacks 2026">
+  <meta property="og:description" content="Meet the winning teams of FutureHacks 2026 — Overall, Advanced, Intermediate, and Beginner track champions.">
+  <meta property="og:url" content="https://futurehacks.techshareproject.org/winners">
+  <meta property="og:image" content="https://futurehacks.techshareproject.org/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FutureHacks — Build the city of tomorrow, today.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Winners — FutureHacks 2026">
+  <meta name="twitter:description" content="Meet the winning teams of FutureHacks 2026.">
+  <meta name="twitter:image" content="https://futurehacks.techshareproject.org/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="FutureHacks — Build the city of tomorrow, today.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- If JS is disabled, scroll-reveal never fires; show all content. -->
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="assets/favicon.png">
+  <meta name="theme-color" content="#0f172a">
+  <!-- Vercel Web Analytics -->
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+
+  <!-- Built by James Hou and Arun Damodaran. -->
+  <!-- Unlisted page: not linked from navbar or sitemap.xml until announcement-ready. -->
+  <style>
+    /* ===== PAGE-SPECIFIC STYLES: WINNERS ===== */
+
+    /* Hero */
+    .win-hero {
+      padding: 152px 0 80px;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 28px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .win-hero-inner { max-width: 720px; }
+    .win-hero-badge {
+      display: inline-block; font-family: var(--font-mono); font-size: 0.85rem;
+      font-weight: 500; color: var(--accent-text); background: var(--accent);
+      padding: 8px 24px; border-radius: 100px; margin-bottom: 24px;
+      letter-spacing: 0.04em;
+    }
+    .win-hero-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.6rem, 6vw, 4.6rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .win-hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      max-width: 640px;
+    }
+    .win-hero-sub2 {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 640px;
+    }
+
+    /* Stay Connected CTAs */
+    .win-connect { display: flex; flex-wrap: wrap; gap: 14px; }
+    .win-connect-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 100px;
+      font-family: var(--font-display); font-weight: 700; font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .win-connect-btn--discord {
+      background: #5865F2; color: #fff;
+      box-shadow: 0 4px 16px rgba(88,101,242,0.25);
+    }
+    .win-connect-btn--discord:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(88,101,242,0.35); }
+    .win-connect-btn--instagram {
+      background: var(--accent); color: var(--accent-text);
+      border: 1.5px solid var(--accent-strong);
+    }
+    .win-connect-btn--instagram:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+
+    /* Winners section */
+    .winners-section { background: var(--bg); }
+
+    .win-tier-block { margin-bottom: 72px; }
+    .win-tier-block:last-child { margin-bottom: 0; }
+
+    .win-tier-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 18px;
+    }
+    .win-tier-eyebrow--overall      { background: #FDF6DC; color: #8A6D1D; border: 1px solid #E9CE7A; }
+    .win-tier-eyebrow--advanced     { background: #FCE7F3; color: #9D174D; border: 1px solid #F9A8D4; }
+    .win-tier-eyebrow--intermediate { background: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
+    .win-tier-eyebrow--beginner     { background: #E9FADC; color: #2B5A14; border: 1px solid #B8E09B; }
+
+    .win-tier-heading {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      margin-bottom: 28px; color: var(--text);
+    }
+
+    /* Winner Card */
+    .winner-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+    .winner-card-cover,
+    .winner-card-content {
+      border-radius: inherit;
+    }
+    .winner-card-cover { overflow: hidden; }
+    .winner-card:hover { box-shadow: var(--shadow-hover); border-color: var(--accent-strong); }
+    .winner-card--overall::before {
+      content: ''; position: absolute; left: 0; top: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #E9CE7A, #8A6D1D);
+    }
+    .winner-card--advanced::before {
+      content: ''; position: absolute; left: 0; top: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #F9A8D4, #9D174D);
+    }
+    .winner-card--intermediate::before {
+      content: ''; position: absolute; left: 0; top: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #FDE68A, #92400E);
+    }
+    .winner-card--beginner::before {
+      content: ''; position: absolute; left: 0; top: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #B8E09B, #2B5A14);
+    }
+
+    .winner-card-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      width: 100%;
+      padding: 28px;
+    }
+    .winner-card-thumb {
+      flex-shrink: 0;
+      width: 88px; height: 88px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--accent) 0%, var(--bg-alt) 100%);
+      border: 1.5px dashed var(--accent-strong);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent-text);
+    }
+    .winner-card-body { flex: 1; min-width: 0; }
+    .winner-card-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--text); margin: 0 0 6px;
+      letter-spacing: -0.01em;
+    }
+    .winner-card-team {
+      font-size: 0.88rem; color: var(--text-secondary);
+      display: block; margin-bottom: 14px;
+    }
+    .winner-card-desc {
+      font-size: 0.95rem; color: var(--text-secondary);
+      line-height: 1.75; margin-bottom: 18px;
+    }
+    .winner-card-devpost {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-dark); color: var(--white);
+      padding: 12px 24px; border-radius: 100px;
+      font-family: var(--font-display); font-weight: 700; font-size: 0.9rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(30,63,14,0.2);
+    }
+    .winner-card-devpost:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(30,63,14,0.3); }
+
+    /* Click-to-reveal cover */
+    .winner-card-cover {
+      position: absolute; inset: 0; z-index: 10;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px;
+      background: var(--white);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-family: inherit;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    .winner-card--overall .winner-card-cover { background: linear-gradient(135deg, #FDF6DC 0%, var(--white) 70%); }
+    .winner-card--advanced .winner-card-cover { background: linear-gradient(135deg, #FDF2F8 0%, var(--white) 70%); }
+    .winner-card--intermediate .winner-card-cover { background: linear-gradient(135deg, #FEF9EC 0%, var(--white) 70%); }
+    .winner-card--beginner .winner-card-cover { background: linear-gradient(135deg, #E9FADC 0%, var(--white) 70%); }
+    .winner-card-cover-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .winner-card-cover:hover .winner-card-cover-icon { transform: scale(1.08); }
+    .winner-card-cover-label {
+      font-family: var(--font-display); font-weight: 700; font-size: 0.95rem;
+      color: var(--text);
+    }
+    .winner-card-cover-hint {
+      font-family: var(--font-mono); font-size: 0.72rem;
+      color: var(--text-muted); letter-spacing: 0.04em;
+    }
+    .winner-card.revealed .winner-card-cover {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Confetti */
+    .confetti-burst {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: visible;
+      z-index: 20;
+    }
+    .confetti-piece {
+      position: absolute; top: 40%; left: 50%;
+      width: 8px; height: 8px;
+      opacity: 0;
+      animation: confetti-fall 1.1s ease-out forwards;
+    }
+    @keyframes confetti-fall {
+      0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+      100% { transform: var(--confetti-end) rotate(var(--confetti-spin)); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .confetti-piece { display: none; }
+      .winner-card-cover { transition: none; }
+    }
+
+    /* Closing strip */
+    .win-closing {
+      background: var(--bg-alt);
+      text-align: center;
+    }
+    .win-closing-heading {
+      font-family: var(--font-display); font-weight: 800;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 14px; color: var(--text);
+    }
+    .win-closing-sub {
+      font-size: 1rem; color: var(--text-secondary);
+      max-width: 560px; margin: 0 auto 32px; line-height: 1.75;
+    }
+    .win-closing .win-connect { justify-content: center; }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .win-hero { padding: 120px 16px 64px; }
+      .winner-card-trigger { flex-wrap: wrap; padding: 20px; gap: 16px; }
+      .winner-card-thumb { width: 72px; height: 72px; }
+      .winner-card-detail-content { padding: 0 20px 20px; padding-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Grain Overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html#hero" class="nav-logo">FutureHacks</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#details">Details</a></li>
+        <li><a href="index.html#schedule">Schedule</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#sponsors">Sponsors</a></li>
+        <li><a href="index.html#judges">Judges</a></li>
+        <li><a href="https://futurehacks.devpost.com/" class="nav-cta" target="_blank" rel="noopener noreferrer">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- Hero -->
+  <section class="win-hero">
+    <div class="container win-hero-inner">
+      <span class="win-hero-badge reveal">FutureHacks 2026 Results</span>
+      <h1 class="win-hero-title reveal">Meet the Winners</h1>
+      <p class="win-hero-sub reveal">Congratulations to our winners, and to everyone who submitted! Building something from scratch in a few days is no small feat, and every single team should be proud of what they shipped.</p>
+      <p class="win-hero-sub2 reveal">We hope you learned something new, met great people, and had fun along the way. This is just the beginning — stay connected with us below to hear about future hackathons, events, and initiatives.</p>
+      <div class="win-connect reveal">
+        <a href="https://discord.gg/wq4PSXcQJ" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--discord">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.27 5.33A18.27 18.27 0 0 0 15.14 4c-.19.34-.4.79-.55 1.15a16.9 16.9 0 0 0-5.18 0A9.4 9.4 0 0 0 8.86 4a18.2 18.2 0 0 0-4.14 1.33C2.24 8.9 1.57 12.38 1.9 15.81a18.4 18.4 0 0 0 5.6 2.83c.46-.62.86-1.28 1.2-1.98-.66-.25-1.29-.55-1.89-.92.16-.12.32-.24.47-.37a13.1 13.1 0 0 0 11.24 0c.15.13.31.25.47.37-.6.37-1.23.67-1.89.92.34.7.74 1.36 1.2 1.98a18.35 18.35 0 0 0 5.6-2.83c.4-3.98-.62-7.43-2.63-10.48ZM8.68 13.7c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Zm6.64 0c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Z" fill="currentColor"/></svg>
+          <span>Join our Discord</span>
+        </a>
+        <a href="https://www.instagram.com/techshareproject/" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          <span>Follow on Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Winners -->
+  <section class="winners-section section">
+    <div class="container">
+
+      <!-- 1st Overall -->
+      <div class="win-tier-block">
+        <span class="win-tier-eyebrow win-tier-eyebrow--overall reveal">🏆 1st Place Overall</span>
+        <div class="winner-card winner-card--overall reveal" data-tier="overall">
+          <button class="winner-card-cover" type="button" aria-label="Reveal winning project">
+            <div class="winner-card-cover-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4.5 4 1.3 6-4.8-3-4.8 3 1.3-6L4 9l5.5-.5L12 3z" stroke="#8A6D1D" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="winner-card-cover-label">Reveal the winner</span>
+            <span class="winner-card-cover-hint">Click to open →</span>
+          </button>
+          <div class="winner-card-content">
+            <div class="winner-card-thumb" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 5-6 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="winner-card-body">
+              <h3 class="winner-card-title">[Project Title]</h3>
+              <span class="winner-card-team">[Team Member 1], [Team Member 2], [Team Member 3]</span>
+              <p class="winner-card-desc">[Brief description of the winning project: what it does, the problem it solves, and what makes it stand out.]</p>
+              <a href="#" target="_blank" rel="noopener" class="winner-card-devpost">View on Devpost →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1st Advanced -->
+      <div class="win-tier-block">
+        <span class="win-tier-eyebrow win-tier-eyebrow--advanced reveal">1st Place, Advanced</span>
+        <div class="winner-card winner-card--advanced reveal" data-tier="advanced">
+          <button class="winner-card-cover" type="button" aria-label="Reveal winning project">
+            <div class="winner-card-cover-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4.5 4 1.3 6-4.8-3-4.8 3 1.3-6L4 9l5.5-.5L12 3z" stroke="#9D174D" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="winner-card-cover-label">Reveal the winner</span>
+            <span class="winner-card-cover-hint">Click to open →</span>
+          </button>
+          <div class="winner-card-content">
+            <div class="winner-card-thumb" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 5-6 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="winner-card-body">
+              <h3 class="winner-card-title">[Project Title]</h3>
+              <span class="winner-card-team">[Team Member 1], [Team Member 2]</span>
+              <p class="winner-card-desc">[Brief description of the winning project: what it does, the problem it solves, and what makes it stand out.]</p>
+              <a href="#" target="_blank" rel="noopener" class="winner-card-devpost">View on Devpost →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1st Intermediate -->
+      <div class="win-tier-block">
+        <span class="win-tier-eyebrow win-tier-eyebrow--intermediate reveal">1st Place, Intermediate</span>
+        <div class="winner-card winner-card--intermediate reveal" data-tier="intermediate">
+          <button class="winner-card-cover" type="button" aria-label="Reveal winning project">
+            <div class="winner-card-cover-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4.5 4 1.3 6-4.8-3-4.8 3 1.3-6L4 9l5.5-.5L12 3z" stroke="#92400E" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="winner-card-cover-label">Reveal the winner</span>
+            <span class="winner-card-cover-hint">Click to open →</span>
+          </button>
+          <div class="winner-card-content">
+            <div class="winner-card-thumb" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 5-6 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="winner-card-body">
+              <h3 class="winner-card-title">[Project Title]</h3>
+              <span class="winner-card-team">[Team Member 1], [Team Member 2]</span>
+              <p class="winner-card-desc">[Brief description of the winning project: what it does, the problem it solves, and what makes it stand out.]</p>
+              <a href="#" target="_blank" rel="noopener" class="winner-card-devpost">View on Devpost →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1st Beginner -->
+      <div class="win-tier-block">
+        <span class="win-tier-eyebrow win-tier-eyebrow--beginner reveal">1st Place, Beginner</span>
+        <div class="winner-card winner-card--beginner reveal" data-tier="beginner">
+          <button class="winner-card-cover" type="button" aria-label="Reveal winning project">
+            <div class="winner-card-cover-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5.5L20 9l-4.5 4 1.3 6-4.8-3-4.8 3 1.3-6L4 9l5.5-.5L12 3z" stroke="#2B5A14" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="winner-card-cover-label">Reveal the winner</span>
+            <span class="winner-card-cover-hint">Click to open →</span>
+          </button>
+          <div class="winner-card-content">
+            <div class="winner-card-thumb" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 5-6 4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="winner-card-body">
+              <h3 class="winner-card-title">[Project Title]</h3>
+              <span class="winner-card-team">[Team Member 1], [Team Member 2]</span>
+              <p class="winner-card-desc">[Brief description of the winning project: what it does, the problem it solves, and what makes it stand out.]</p>
+              <a href="#" target="_blank" rel="noopener" class="winner-card-devpost">View on Devpost →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="win-closing section">
+    <div class="container">
+      <h2 class="win-closing-heading reveal">Thanks for building with us</h2>
+      <p class="win-closing-sub reveal">Congratulations again to every team who submitted a project. Stay connected to hear about future hackathons, events, and initiatives from TechShare.</p>
+      <div class="win-connect reveal">
+        <a href="https://discord.gg/wq4PSXcQJ" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--discord">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.27 5.33A18.27 18.27 0 0 0 15.14 4c-.19.34-.4.79-.55 1.15a16.9 16.9 0 0 0-5.18 0A9.4 9.4 0 0 0 8.86 4a18.2 18.2 0 0 0-4.14 1.33C2.24 8.9 1.57 12.38 1.9 15.81a18.4 18.4 0 0 0 5.6 2.83c.46-.62.86-1.28 1.2-1.98-.66-.25-1.29-.55-1.89-.92.16-.12.32-.24.47-.37a13.1 13.1 0 0 0 11.24 0c.15.13.31.25.47.37-.6.37-1.23.67-1.89.92.34.7.74 1.36 1.2 1.98a18.35 18.35 0 0 0 5.6-2.83c.4-3.98-.62-7.43-2.63-10.48ZM8.68 13.7c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Zm6.64 0c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Z" fill="currentColor"/></svg>
+          <span>Join our Discord</span>
+        </a>
+        <a href="https://www.instagram.com/techshareproject/" target="_blank" rel="noopener" class="win-connect-btn win-connect-btn--instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          <span>Follow on Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>FutureHacks</h3>
+          <p>A <a href="https://www.techshareproject.org/" target="_blank" rel="noopener">TechShareProject</a> initiative</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://discord.gg/wq4PSXcQJ" target="_blank" rel="noopener" aria-label="Discord">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19.27 5.33A18.27 18.27 0 0 0 15.14 4c-.19.34-.4.79-.55 1.15a16.9 16.9 0 0 0-5.18 0A9.4 9.4 0 0 0 8.86 4a18.2 18.2 0 0 0-4.14 1.33C2.24 8.9 1.57 12.38 1.9 15.81a18.4 18.4 0 0 0 5.6 2.83c.46-.62.86-1.28 1.2-1.98-.66-.25-1.29-.55-1.89-.92.16-.12.32-.24.47-.37a13.1 13.1 0 0 0 11.24 0c.15.13.31.25.47.37-.6.37-1.23.67-1.89.92.34.7.74 1.36 1.2 1.98a18.35 18.35 0 0 0 5.6-2.83c.4-3.98-.62-7.43-2.63-10.48ZM8.68 13.7c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Zm6.64 0c-.87 0-1.58-.8-1.58-1.79 0-.98.69-1.79 1.58-1.79.9 0 1.6.81 1.58 1.79 0 .98-.68 1.79-1.58 1.79Z" fill="currentColor"/></svg>
+            <span>Discord</span>
+          </a>
+          <a href="https://www.instagram.com/techshareproject/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="mailto:projecttechshare@gmail.com" aria-label="Email TechShare Project">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 7l10 7 10-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>projecttechshare@gmail.com</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TechShareProject. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 9l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    (function () {
+      const CONFETTI_COLORS = ['#B8E09B', '#2B5A14', '#FDE68A', '#92400E', '#F9A8D4', '#9D174D', '#E9CE7A', '#8A6D1D'];
+      const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function launchConfetti(card) {
+        if (prefersReducedMotion) return;
+
+        const burst = document.createElement('div');
+        burst.className = 'confetti-burst';
+        card.appendChild(burst);
+
+        const pieceCount = 32;
+        for (let i = 0; i < pieceCount; i++) {
+          const piece = document.createElement('span');
+          piece.className = 'confetti-piece';
+
+          const color = CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)];
+          const angle = Math.random() * Math.PI * 2;
+          const distance = 60 + Math.random() * 140;
+          const endX = Math.cos(angle) * distance;
+          const endY = Math.sin(angle) * distance - 40; // bias upward slightly
+          const spin = Math.floor(Math.random() * 720 - 360);
+          const size = 6 + Math.random() * 6;
+          const isCircle = Math.random() > 0.5;
+
+          piece.style.background = color;
+          piece.style.width = size + 'px';
+          piece.style.height = size + 'px';
+          piece.style.borderRadius = isCircle ? '50%' : '2px';
+          piece.style.setProperty('--confetti-end', 'translate(' + endX + 'px, ' + endY + 'px)');
+          piece.style.setProperty('--confetti-spin', spin + 'deg');
+          piece.style.animationDelay = (Math.random() * 0.15) + 's';
+
+          burst.appendChild(piece);
+        }
+
+        setTimeout(function () {
+          burst.remove();
+        }, 1400);
+      }
+
+      document.querySelectorAll('.winner-card').forEach(function (card) {
+        const cover = card.querySelector('.winner-card-cover');
+
+        cover.addEventListener('click', function () {
+          if (card.classList.contains('revealed')) return;
+          card.classList.add('revealed');
+          launchConfetti(card);
+        }, { once: true });
+      });
+    })();
+  </script>
+</body>
+</html>
